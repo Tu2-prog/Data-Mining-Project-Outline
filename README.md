@@ -1,5 +1,7 @@
 # Data-Mining-Project-Outline
 
+03.10.2024
+
 This repository contains the LaTex code for the Data Mining Project Outline of HWS24.
 
 ## Prerequisites
