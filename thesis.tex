@@ -69,10 +69,10 @@ This chapter outlines the methodology that is pursued for our group project. Sec
 \section{Data Collection Methodology}\label{sec:dataset}
 While there is an existing dataset on Kaggle\footnote{https://www.kaggle.com/datasets/nokkyu/deutsche-bahn-db-delays}, we want to propose that we crawl additional data using the same APIs for the existing dataset: Timetables and StaDa API from the DB API marketplace.
 The reason for this is that the existing dataset is limited to only one week in July, ranging from 08.07.2024 to 14.07.2024 and we would like to enrich this dataset with more recent data to achieve better performance as more data can help making a much more accurate analysis.
-However, if the crawling process turns out to be more diffilcult than we initially assumed, then we will proceed our project using the existing dataset.
+However, if the crawling process turns out to be more difficult than we initially assumed, then we will proceed our project using the existing dataset.
 
 \section{Data Mining Methodology}\label{sec:data-mining-methodology}
-Due to the fact that we intend to crawl our data using the DB APIs, it becomes evident that there are several pre-processing steps required before the main work can start. At first we need to aggregate all data in a single dataset such that it mathces the existing dataset.
+Due to the fact that we intend to crawl our data using the DB APIs, it becomes evident that there are several pre-processing steps required before the main work can start. At first we need to aggregate all data in a single dataset such that it matches the existing dataset.
 Some additional potential steps are:
 \begin{enumerate}
   \item Tranformation, i.e. transforming discrete classes into numerical values
@@ -80,8 +80,8 @@ Some additional potential steps are:
   \item Potentially detecting and removing outliers
 \end{enumerate}
 
-In this work , we intend to leverage the property that Regression algorithms can be used for classification problems such that we can provide a prediction with a specific certainty for passengers. To predict the delay, we intend to
-use the interpolating Regression Trees to give a reasonable prediction taken from the training dataset interval. However, to compare our results we also aim to make use of other convential methods for classification like Decision Trees and Nearest Centroids.
+In this work, we intend to leverage the property that Regression algorithms can be used for classification problems such that we can provide a prediction with a specific certainty for passengers. To predict the delay, we intend to
+use the interpolating Regression Trees to give a reasonable prediction taken from the training dataset interval. However, to compare our results we also aim to make use of other conventional methods for classification like Decision Trees and Nearest Centroids.
 If sufficient computing power is present, then it will be from great interest if the problems can be solved using Neural Networks.
 
 \chapter{Evaluation}\label{ch:eval}
