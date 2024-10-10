@@ -28,23 +28,24 @@
 
 \begin{document}
 
-\frontmatter \subject{Master Thesis} % change to appropriate type
-\title{Title of Your Master Thesis}
-\author{Max Muster\\
-  (matriculation number 12345678)} \date{July 1, 2024}
-\publishers{{\small Submitted to}\\
-  Data and Web Science Group\\
-  Prof.\ Dr.\ Right-Name-Here\\
-  University of Mannheim\\}
-\maketitle
+    \frontmatter \subject{Master Thesis} % change to appropriate type
+    \title{Title of Your Master Thesis}
+    \author{Max Muster\\
+    (matriculation number 12345678)} \date{July 1, 2024}
+    \publishers{{\small Submitted to}\\
+    Data and Web Science Group\\
+    Prof.\ Dr.\ Right-Name-Here\\
+    University of Mannheim\\}
+    \maketitle
 
-\chapter{Abstract}
+
+    \chapter{Abstract}
 
 % table of contents
-\begingroup%
-\hypersetup{hidelinks}% disable link color in TOC only
-\tableofcontents%
-\endgroup
+    \begingroup%
+    \hypersetup{hidelinks}% disable link color in TOC only
+    \tableofcontents%
+    \endgroup
 
 % none of the things below is needed, but you may add them if you feel that they
 % are helpful for your work \listofalgorithms \listoffigures \listoftables
@@ -52,74 +53,99 @@
 
 
 % okay, start new numbering ... here is where it really starts
-\mainmatter
+    \mainmatter
 
-\chapter{Introduction}
-\label{ch:intro}
 
-Railway systems play a crucial role in public transportation, and maintaining on-time train schedules is essential for operational efficiency and passenger satisfaction. In recent years, delays have become a growing concern for Deutsche Bahn, leading to disruptions that affect commuters and long-distance travelers alike. Understanding the underlying factors contributing to delays could provide valuable insights for improving service reliability and decision-making.
+    \chapter{Introduction}
+    \label{ch:intro}
 
-Our project aims to address this issue by developing a predictive model that forecasts whether future trains will arrive on time or be delayed. Using historical data from Deutsche Bahn, we will analyze variables such as location, train type (e.g., regional trains, S-Bahn), and additional factors like weather or time of day. From an academic perspective, this project will contribute to the field of predictive analytics, particularly in transportation systems. The findings will not only advance data mining techniques but also offer a practical application of machine learning models to real-world problems.
+    Railway systems play a crucial role in public transportation, and maintaining on-time train schedules is essential for operational efficiency and passenger satisfaction. In recent years, delays have become a growing concern for Deutsche Bahn, leading to disruptions that affect commuters and long-distance travelers alike. Understanding the underlying factors contributing to delays could provide valuable insights for improving service reliability and decision-making.
 
-From a business perspective, the ability to predict delays could enable Deutsche Bahn to implement proactive measures to minimize disruptions. By understanding patterns in delays, Deutsche Bahn can allocate resources more effectively, optimize scheduling, and ultimately improve customer satisfaction. Furthermore, passengers may benefit from more accurate information about expected delays, helping them plan their journeys better. In this sense, our project offers both an academic challenge and the potential for a meaningful business impact.
+    Our project aims to address this issue by developing a predictive model that forecasts whether future trains will arrive on time or be delayed. Using historical data from Deutsche Bahn, we will analyze variables such as location, train type (e.g., regional trains, S-Bahn), and additional factors like weather or time of day. From an academic perspective, this project will contribute to the field of predictive analytics, particularly in transportation systems. The findings will not only advance data mining techniques but also offer a practical application of machine learning models to real-world problems.
 
-\chapter{Methodology}
-\label{ch:methodology}
-This chapter outlines the methodology that is pursued for our group project. Section \ref{sec:dataset} explains the overall process on compiling the data for our project. Section \ref{sec:data-mining-methodology} provides an overview on how we want to tackle the problems we have stated in Chapter \ref{ch:intro}.
-\section{Data Collection Methodology}\label{sec:dataset}
-While there is an existing dataset on Kaggle\footnote{https://www.kaggle.com/datasets/nokkyu/deutsche-bahn-db-delays}, we want to propose that we crawl additional data using the same APIs for the existing dataset: Timetables and StaDa API from the DB API marketplace.
-The reason for this is that the existing dataset is limited to only one week in July, ranging from 08.07.2024 to 14.07.2024 and we would like to enrich this dataset with more recent data to achieve better performance as more data can help making a much more accurate analysis.
-However, if the crawling process turns out to be more diffilcult than we initially assumed, then we will proceed our project using the existing dataset.
+    From a business perspective, the ability to predict delays could enable Deutsche Bahn to implement proactive measures to minimize disruptions. By understanding patterns in delays, Deutsche Bahn can allocate resources more effectively, optimize scheduling, and ultimately improve customer satisfaction. Furthermore, passengers may benefit from more accurate information about expected delays, helping them plan their journeys better. In this sense, our project offers both an academic challenge and the potential for a meaningful business impact.
 
-\section{Data Mining Methodology}\label{sec:data-mining-methodology}
-Due to the fact that we intend to crawl our data using the DB APIs, it becomes evident that there are several pre-processing steps required before the main work can start. At first we need to aggregate all data in a single dataset such that it mathces the existing dataset.
-Some additional potential steps are:
-\begin{enumerate}
-  \item Tranformation, i.e. transforming discrete classes into numerical values
-  \item Binning according to regions, stations etc. for following clustering
-  \item Potentially detecting and removing outliers
-\end{enumerate}
 
-In this work , we intend to leverage the property that Regression algorithms can be used for classification problems such that we can provide a prediction with a specific certainty for passengers. To predict the delay, we intend to
-use the interpolating Regression Trees to give a reasonable prediction taken from the training dataset interval. However, to compare our results we also aim to make use of other convential methods for classification like Decision Trees and Nearest Centroids.
-If sufficient computing power is present, then it will be from great interest if the problems can be solved using Neural Networks.
+    \chapter{Methodology}
+    \label{ch:methodology}
+    This chapter outlines the methodology that is pursued for our group project. Section \ref{sec:dataset} explains the overall process on compiling the data for our project. Section \ref{sec:data-mining-methodology} provides an overview on how we want to tackle the problems we have stated in Chapter \ref{ch:intro}.
 
-\chapter{Evaluation}\label{ch:eval}
 
-\bibliography{references}
+    \section{Data Collection Methodology}\label{sec:dataset}
+    While there is an existing dataset on Kaggle\footnote{https://www.kaggle.com/datasets/nokkyu/deutsche-bahn-db-delays}, we want to propose that we crawl additional data using the same APIs for the existing dataset: Timetables and StaDa API from the DB API marketplace.
+    The reason for this is that the existing dataset is limited to only one week in July, ranging from 08.07.2024 to 14.07.2024 and we would like to enrich this dataset with more recent data to achieve better performance as more data can help making a much more accurate analysis.
+    However, if the crawling process turns out to be more diffilcult than we initially assumed, then we will proceed our project using the existing dataset.
 
-\backmatter
-\chapter{Ehrenwörtliche Erklärung}
 
-Ich versichere, dass ich die beiliegende Bachelor-, Master-, Seminar-, oder
-Projektarbeit ohne Hilfe Dritter und ohne Benutzung anderer als der angegebenen
-Quellen und in der untenstehenden Tabelle angegebenen Hilfsmittel angefertigt
-und die den benutzten Quellen wörtlich oder inhaltlich entnommenen Stellen als
-solche kenntlich gemacht habe. Diese Arbeit hat in gleicher oder ähnlicher Form
-noch keiner Prüfungsbehörde vorgelegen. Ich bin mir bewusst, dass eine falsche
-Erklärung rechtliche Folgen haben wird.
+    \section{Data Mining Methodology}\label{sec:data-mining-methodology}
+    Due to the fact that we intend to crawl our data using the DB APIs, it becomes evident that there are several pre-processing steps required before the main work can start. At first we need to aggregate all data in a single dataset such that it mathces the existing dataset.
+    Some additional potential steps are:
+    \begin{enumerate}
+        \item Tranformation, i.e. transforming discrete classes into numerical values
+        \item Binning according to regions, stations etc. for following clustering
+        \item Potentially detecting and removing outliers
+    \end{enumerate}
+
+    In this work , we intend to leverage the property that Regression algorithms can be used for classification problems such that we can provide a prediction with a specific certainty for passengers. To predict the delay, we intend to
+    use the interpolating Regression Trees to give a reasonable prediction taken from the training dataset interval. However, to compare our results we also aim to make use of other convential methods for classification like Decision Trees and Nearest Centroids.
+    If sufficient computing power is present, then it will be from great interest if the problems can be solved using Neural Networks.
+
+
+    \chapter{Evaluation}\label{ch:eval}
+    The delay prediction model will be evaluated by partitioning the dataset, with 20\% reserved for testing.
+    To avoid overfitting, 10-fold cross-validation will be applied to 80\% of the data.
+    Performance will be primarily measured using the F1 score, which balances precision and recall.
+    A confusion matrix will offer insight into misclassifications between delay categories,
+    such as between medium and short delays.
+    Additionally, a cost analysis will be conducted to assess the impact of these misclassifications,
+    with a focus on high-impact errors.
+
+    \chapter{Expected Results}\label{sec:expected_results}
+
+    The project aims to develop a model that accurately predicts train delays by category and duration, focusing on regional and express trains.
+    While perfect accuracy is not expected, the model is intended to provide reliable predictions that inform decision-making in train scheduling.
+    The expected results include identifying patterns that link delays to specific factors, such as stations, times of day, or regions.
+    Certain stations may be identified as bottlenecks with more frequent or prolonged delays, while rush hours or high-traffic regions may show time-based delay trends.
+    External factors, such as holidays or local events, may also contribute to longer delays in certain areas.
+
+
+
+    \bibliography{references}
+
+    \backmatter
+
+
+    \chapter{Ehrenwörtliche Erklärung}
+
+    Ich versichere, dass ich die beiliegende Bachelor-, Master-, Seminar-, oder
+    Projektarbeit ohne Hilfe Dritter und ohne Benutzung anderer als der angegebenen
+    Quellen und in der untenstehenden Tabelle angegebenen Hilfsmittel angefertigt
+    und die den benutzten Quellen wörtlich oder inhaltlich entnommenen Stellen als
+    solche kenntlich gemacht habe. Diese Arbeit hat in gleicher oder ähnlicher Form
+    noch keiner Prüfungsbehörde vorgelegen. Ich bin mir bewusst, dass eine falsche
+    Erklärung rechtliche Folgen haben wird.
 
 % Declare below which AI tools you used in the process of writing your work,
 % including text, image, code, and data generation. If you used a tool for a
 % purpose not included in the list yet, add it to the list.
-\begin{center}
-  \textbf{Declaration of Used AI Tools} \\[.3em]
-  \begin{tabularx}{\textwidth}{lXlc}
-    \toprule
-    Tool & Purpose & Where? & Useful? \\
-    \midrule
-    ChatGPT & Rephrasing & Throughout & + \\
-    DeepL & Translation & Throughout & + \\
-    ResearchGPT & Summarization of related work & Sec.~\ref{sec:related_work_A} & - \\
-    Dall-E & Image generation & Figs.~2, 3 & ++ \\
-    GPT-4 & Code generation & functions.py & + \\
-    ChatGPT & Related work hallucination & Most of bibliography & ++ \\
-    \bottomrule
-  \end{tabularx}
-\end{center}
+    \begin{center}
+        \textbf{Declaration of Used AI Tools} \\[.3em]
+        \begin{tabularx}{\textwidth}{lXlc}
+            \toprule
+            Tool        & Purpose                       & Where?                        & Useful? \\
+            \midrule
+            ChatGPT     & Rephrasing                    & Throughout                    & +       \\
+            DeepL       & Translation                   & Throughout                    & +       \\
+            ResearchGPT & Summarization of related work & Sec.~\ref{sec:related_work_A} & -       \\
+            Dall-E      & Image generation              & Figs.~2, 3                    & ++      \\
+            GPT-4       & Code generation               & functions.py                  & +       \\
+            ChatGPT     & Related work hallucination    & Most of bibliography          & ++      \\
+            \bottomrule
+        \end{tabularx}
+    \end{center}
 
-\vspace{2cm}
-\noindent Unterschrift\\
-\noindent Mannheim, den XX.~XXXX 2024 \hfill
+    \vspace{2cm}
+    \noindent Unterschrift\\
+    \noindent Mannheim, den XX.~XXXX 2024 \hfill
 
 \end{document}
