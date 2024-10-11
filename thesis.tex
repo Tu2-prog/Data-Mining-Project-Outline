@@ -78,10 +78,10 @@ Due to the fact that we intend to crawl our data using the DB APIs, it becomes e
 Some additional potential steps are:
 \begin{enumerate}
     \item Tranformation, i.e. transforming discrete classes into numerical values
-    \item Binning according to regions, stations etc. for following clustering
+    \item Binning according to delay, regions, stations etc. for following clustering
     \item Potentially detecting and removing outliers
 \end{enumerate}
-In this work , we intend to leverage the property that Regression algorithms can be used for classification problems such that we can provide a prediction with a specific certainty for passengers. To predict the delay, we intend to
+In this work , we intend to leverage the property that Regression algorithms can be used for classification problems such that we can provide a prediction a delay with a specific certainty for passengers. To predict the delay, we intend to
 use the interpolating Regression Trees to give a reasonable prediction taken from the training dataset interval. However, to compare our results we also aim to make use of other convential methods for classification like Decision Trees and Nearest Centroids.
 If sufficient computing power is present, then it will be from great interest if the problems can be solved using Neural Networks.
 
