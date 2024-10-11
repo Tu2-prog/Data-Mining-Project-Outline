@@ -54,9 +54,7 @@ From a business perspective, the ability to predict delays could enable Deutsche
 This chapter outlines the methodology that is pursued for our group project. Section \ref{sec:dataset} explains the overall process on compiling the data for our project. Section \ref{sec:data-mining-methodology} provides an overview on how we want to tackle the problems we have stated in Chapter \ref{ch:intro}.
 
 \section{Data Collection Methodology}\label{sec:dataset}
-While there is an existing dataset on Kaggle\footnote{https://www.kaggle.com/datasets/nokkyu/deutsche-bahn-db-delays}, we want to propose that we crawl additional data using the same APIs for the existing dataset: Timetables and StaDa API from the DB API marketplace.
-The reason for this is that the existing dataset is limited to only one week in July, ranging from 08.07.2024 to 14.07.2024 and we would like to enrich this dataset with more recent data to achieve better performance as more data can help making a much more accurate analysis.
-However, if the crawling process turns out to be more diffilcult than we initially assumed, then we will proceed our project using the existing dataset.
+We will either use the crawled dataset or the existing Kaggle\footnote{https://www.kaggle.com/datasets/nokkyu/deutsche-bahn-db-delays} dataset. Although a dataset is already available on Kaggle, we propose crawling additional data using the same APIs: the Timetables and StaDa APIs from the DB API marketplace. This is because the existing dataset is limited to a single week in July (08.07.2024 to 14.07.2024), and we aim to enhance it with more recent data to improve performance, as larger datasets typically enable more accurate analysis. However, if the crawling process proves to be more challenging than anticipated, we will proceed with the project using the Kaggle dataset.
 The dataset will include the following data:
 \begin{itemize}
     \item Station
