@@ -141,9 +141,11 @@ To ensure clarity and consistency, when comparing models to select the best one,
 we will only compare regression models against other regression models and classification models against other classification models.
 Cross-comparisons between regression and classification models will not be performed.
 
-\chapter{Evaluation of the Model}
-\label{ch:eval}
+\chapter{Evaluation}\label{ch:eval}
+In this chapter, it will be outlined how the evaluation of the results will take place.
+In particular, Section \ref{sec:eval-methodology} provides details on how the techniques are evaluated while Section \ref{sec:expected_results} explains how the results are envisioned in this project.
 
+\section{Evaluation Methodology}\label{sec:eval-methodology}
 The delay prediction model will be evaluated by partitioning the dataset, with 20\% of the data reserved for testing.
 This split is commonly regarded as a standard practice in data mining.
 To prevent overfitting, we will apply 10-fold cross-validation to the remaining 80\% of the data.
@@ -162,8 +164,8 @@ The R² score focuses on how much of the variance in the data is explained by th
 In contrast, RMSE measures the average difference between the predicted and actual values,
 offering a clear interpretation in the same units as the target variable.
 
-\chapter{Expected Results}
-\label{ch:expected_results}
+\section{Expected Results}
+\label{sec:expected_results}
 
 The project aims to develop a model that accurately predicts train delays by both category and duration.
 While perfect accuracy is not expected, the goal is to provide reliable predictions that can support decision-making in train scheduling.
