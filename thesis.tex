@@ -1,5 +1,5 @@
 % Do not change document class, margins, fonts, etc.
-\documentclass[a4paper,oneside,bibliography=totoc]{scrbook}
+\documentclass[a4paper,oneside,bibliography=totoc]{scrartcl}
 
 % some useful packages (add more as needed)
 \usepackage[utf8]{inputenc}
@@ -10,7 +10,7 @@
 \usepackage{tabularx}
 \usepackage{booktabs}
 \usepackage{algorithm} % you can modify the algorithm style to your liking
-\counterwithin{algorithm}{chapter} % so that algorithms have chapter numbers as well
+%\counterwithin{algorithm}{chapter} % so that algorithms have chapter numbers as well
 \usepackage{algorithmic}
 \usepackage{csquotes}
 \renewcommand{\algorithmiccomment}[1]{\hfill\textit{// #1}}
@@ -47,9 +47,9 @@ University of Mannheim\\}
 % okay, start new numbering ... here is where it really starts
 
 \mainmatter
-
-\chapter{Introduction}
-\label{ch:intro}
+\pagebreak
+\section{Introduction}
+\label{sec:intro}
 
 Railway systems are crucial for public transportation,
 as maintaining punctual schedules is essential for operational efficiency and passenger satisfaction.
@@ -71,15 +71,15 @@ Passengers would benefit from more accurate information on expected delays, impr
 Therefore, the project presents an academic challenge and the potential for meaningful business impact.
 
 
-\chapter{Methodology}
-\label{ch:methodology}
-This chapter outlines the methodology that is pursued for our group project.
-Section~\ref{sec:dataset} explains the overall process on compiling the data for our project.
-Section~\ref{sec:data-mining-methodology} provides an overview
-on how we want to tackle the problems we have stated in Chapter~\ref{ch:intro}.
+\section{Methodology}
+\label{sec:methodology}
+This section outlines the methodology that is pursued for our group project.
+Section~\ref{subsec:dataset} explains the overall process on compiling the data for our project.
+Section~\ref{subsec:data-mining-methodology} provides an overview
+on how we want to tackle the problems we have stated in Section~\ref{sec:intro}.
 
-\section{Data Collection Methodology}
-\label{sec:dataset}
+\subsection{Data Collection Methodology}
+\label{subsec:dataset}
 
 We will either use a dataset from Kaggle\footnote{https://www.kaggle.com/datasets/nokkyu/deutsche-bahn-db-delays}
 or collect our data by crawling.
@@ -109,11 +109,10 @@ The dataset will contain the following data:
 \end{itemize}
 
 
-\section{Data Mining Methodology}
-\label{sec:data-mining-methodology}
+\subsection{Data Mining Methodology}
+\label{subsec:data-mining-methodology}
 
 Several pre-processing steps are required before beginning the main analysis.
-
 Our pre-processing steps may include:
 \begin{enumerate}
     \item Aggregating data from multiple sources into a single dataset (when required).
@@ -141,11 +140,11 @@ To ensure clarity and consistency, when comparing models to select the best one,
 we will only compare regression models against other regression models and classification models against other classification models.
 Cross-comparisons between regression and classification models will not be performed.
 
-\chapter{Evaluation}\label{ch:eval}
+\section{Evaluation}\label{sec:eval}
 In this chapter, it will be outlined how the evaluation of the results will take place.
-In particular, Section \ref{sec:eval-methodology} provides details on how the techniques are evaluated while Section \ref{sec:expected_results} explains how the results are envisioned in this project.
+In particular, Section \ref{subsec:eval-methodology} provides details on how the techniques are evaluated while Section \ref{subsec:expected_results} explains how the results are envisioned in this project.
 
-\section{Evaluation Methodology}\label{sec:eval-methodology}
+\subsection{Evaluation Methodology}\label{subsec:eval-methodology}
 The delay prediction model will be evaluated by partitioning the dataset, with 20\% of the data reserved for testing.
 This split is commonly regarded as a standard practice in data mining.
 To prevent overfitting, we will apply 10-fold cross-validation to the remaining 80\% of the data.
@@ -164,8 +163,7 @@ The R² score focuses on how much of the variance in the data is explained by th
 In contrast, RMSE measures the average difference between the predicted and actual values,
 offering a clear interpretation in the same units as the target variable.
 
-\section{Expected Results}
-\label{sec:expected_results}
+\subsection{Expected Results}\label{subsec:expected_results}
 
 The project aims to develop a model that accurately predicts train delays by both category and duration.
 While perfect accuracy is not expected, the goal is to provide reliable predictions that can support decision-making in train scheduling.
@@ -180,12 +178,15 @@ Identifying these trends will contribute to a better understanding of the causes
 
 \backmatter
 
-\chapter{Declaration of honor}\label{ch:declaration-of-honor}
-I hereby declare that I have written the enclosed Bachelor's, Master's,
-seminar or project work without the help of third parties and without using any sources other than those listed and the aids listed in the table below,
-and that I have marked the passages taken from the sources used as such, either literally or in terms of content.
+\pagebreak
+
+\section*{Declaration of honor}\label{sec:declaration-of-honor}
+
+We hereby declare that we have written the enclosed Bachelor's, Master's, seminar,
+or project work without the help of third parties and without using any sources other than those listed and the aids listed in the table below,
+and that we have marked the passages taken from the sources used as such, either literally or in terms of content.
 This thesis has not yet been submitted to any examination authority in the same or a similar form.
-I am aware that a false declaration will have legal consequences.
+We are aware that a false declaration will have legal consequences.
 
 % Declare below which AI tools you used in the process of writing your work,
 % including text, image, code, and data generation. If you used a tool for a
@@ -198,8 +199,8 @@ I am aware that a false declaration will have legal consequences.
         & Useful? \\
         \midrule
         ChatGPT/GPT-4o     & Rephrasing and Grammar correction                  & Throughout                    & ++       \\
-        Grammarly   & Grammar correction            & Throughout                    & ++       \\
         ChatGPT/GPT-4o     & Grammar correction               & Throughout     & +        \\
+        Grammarly   & Grammar correction            & Throughout                    & ++       \\
         \bottomrule
     \end{tabularx}
 \end{center}
